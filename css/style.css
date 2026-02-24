@@ -13,6 +13,7 @@ body{
 /* NAVBAR */
 .navbar{
     background:rgba(0, 0, 0, 0.85);
+    background:rgba(14, 14, 14, 0.85);
     position:fixed;
     width:100%;
     z-index:1000;
@@ -338,4 +339,42 @@ body{
     right: 20px;
     font-size: 30px;
     cursor: pointer;
+}
+.museum-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.museum-card{
+    background: #111;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s;
+    text-align: center;
+}
+
+.museum-card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.museum-card h3{
+    font-family: 'Playfair Display', serif;
+    margin: 10px 0 5px;
+    color: #d4af37;
+}
+
+.museum-card p{
+    font-size: 14px;
+    color: #ccc;
+    padding: 0 10px 15px;
+}
+
+.museum-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(212,175,55,.4);
 }
