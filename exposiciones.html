@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Exposiciones | Museo Digital</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">Museo<span>Digital</span></div>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="exposiciones.html" class="active">Exposiciones</a>
+        <a href="artistas.html">Artistas</a>
+        <a href="colecciones.html">Colecciones</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+
+<section class="expo-section">
+    <h1>Exposiciones del Mundo</h1>
+    <p class="subtitle">Un recorrido virtual por el arte, la historia y la cultura global</p>
+
+    <div class="expo-grid">
+
+        <div class="expo-card" onclick="openModal('mexico')">
+            <img src="img/mexico.jpg">
+            <div class="overlay">
+                <h2>México</h2>
+                <span>Arte prehispánico y cultura ancestral</span>
+            </div>
+        </div>
+
+        <div class="expo-card" onclick="openModal('otomanos')">
+            <img src="img/ottoman.jpg">
+            <div class="overlay">
+                <h2>Imperio Otomano</h2>
+                <span>Historia, arte islámico y poder imperial</span>
+            </div>
+        </div>
+
+        <div class="expo-card" onclick="openModal('francia')">
+            <img src="img/francia.jpg">
+            <div class="overlay">
+                <h2>Francia</h2>
+                <span>Arte clásico europeo</span>
+            </div>
+        </div>
+
+        <div class="expo-card" onclick="openModal('italia')">
+            <img src="img/italia.jpg">
+            <div class="overlay">
+                <h2>Italia</h2>
+                <span>Renacimiento y arte clásico</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<script>
+function openModal(region){
+    const modal = document.getElementById("modal");
+    const body = document.getElementById("modal-body");
+
+    const data = {
+        mexico: `
+            <h2>México</h2>
+            <p>Arte prehispánico, cultura ancestral y riqueza histórica.</p>
+            <img src="img/mexico.jpg">
+            <video controls>
+                <source src="img/mexico.mp4" type="video/mp4">
+            </video>
+        `,
+        otomanos: `
+            <h2>Imperio Otomano</h2>
+            <p>Historia, arte islámico y la figura de Hürrem Sultan.</p>
+            <img src="img/ottoman.jpg">
+            <video controls>
+                <source src="img/ottomanos.mp4" type="video/mp4">
+            </video>
+        `,
+        francia: `
+            <h2>Francia</h2>
+            <p>Arte clásico europeo y museos históricos.</p>
+            <img src="img/francia.jpg">
+            <video controls>
+                <source src="img/francia.mp4" type="video/mp4">
+            </video>
+        `,
+        italia: `
+            <h2>Italia</h2>
+            <p>Renacimiento, esculturas y arte clásico.</p>
+            <img src="img/italia.jpg">
+            <video controls>
+                <source src="img/italia.mp4" type="video/mp4">
+            </video>
+        `
+    };
+
+    body.innerHTML = data[region];
+    modal.style.display = "flex";
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
