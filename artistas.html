@@ -4,96 +4,74 @@
     <meta charset="UTF-8">
     <title>Artistas | Museo Digital</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
     <div class="logo">Museo<span>Digital</span></div>
     <nav>
         <a href="index.html">Inicio</a>
-            <a href="exposiciones.html">Museos</a>
-            <a href="galeria.html">Galería</a>
-            <a href="artistas.html">Artistas</a>
-            <a href="esculturas.html">Esculturas</a>
+        <a href="exposiciones.html">Museos</a>
+        <a href="galeria.html">Galería</a>
+        <a href="artistas.html">Artistas</a>
+        <a href="esculturas.html">Esculturas</a>
     </nav>
 </header>
 
-<!-- HEADER VISUAL -->
-<header class="esculturas-header">
+<!-- HEADER -->
+<header class="artistas-header">
     <h1>Artistas más reconocidos</h1>
-    <p>Explora las esculturas más importantes de la historia del arte</p>
+    <p>Conoce la historia de los artistas más importantes del mundo del arte</p>
 </header>
 
-<!-- GALERÍA -->
-<section class="esculturas-container">
+<!-- CONTENEDOR -->
+<section class="artistas-container">
 
-    <div class="card" onclick="openModal('img/david.jpg','David','Miguel Ángel','Escultura renacentista símbolo de perfección humana.')">
-        <img src="img/david.jpg">
-        <h3>David</h3>
-        <p>Miguel Ángel</p>
+    <div class="card" onclick="openModal('img/davinci.jpg','Leonardo da Vinci','Italia','Genio del Renacimiento, pintor de La Mona Lisa y La Última Cena.')">
+        <img src="img/davinci.jpg">
+        <h3>Leonardo da Vinci</h3>
+        <p>Renacimiento</p>
     </div>
 
-    <div class="card" onclick="openModal('img/piedad.jpg','La Piedad','Miguel Ángel','Representación del dolor y la espiritualidad.')">
-        <img src="img/piedad.jpg">
-        <h3>La Piedad</h3>
-        <p>Miguel Ángel</p>
+    <div class="card" onclick="openModal('img/picasso.jpg','Pablo Picasso','España','Creador del cubismo y autor de Guernica.')">
+        <img src="img/picasso.jpg">
+        <h3>Pablo Picasso</h3>
+        <p>Cubismo</p>
     </div>
 
-    <div class="card" onclick="openModal('img/pensador.jpg','El Pensador','Auguste Rodin','Símbolo del pensamiento humano.')">
-        <img src="img/pensador.jpg">
-        <h3>El Pensador</h3>
-        <p>Auguste Rodin</p>
+    <div class="card" onclick="openModal('img/vangogh.jpg','Vincent van Gogh','Países Bajos','Autor de La noche estrellada.')">
+        <img src="img/vangogh.jpg">
+        <h3>Vincent van Gogh</h3>
+        <p>Postimpresionismo</p>
     </div>
 
-    <div class="card" onclick="openModal('img/venus.jpg','Venus de Milo','Alejandro de Antioquía','Escultura clásica de la belleza femenina.')">
-        <img src="img/venus.jpg">
-        <h3>Venus de Milo</h3>
-        <p>Alejandro de Antioquía</p>
+    <div class="card" onclick="openModal('img/frida.jpg','Frida Kahlo','México','Ícono del arte mexicano y el autorretrato.')">
+        <img src="img/frida.jpg">
+        <h3>Frida Kahlo</h3>
+        <p>Surrealismo</p>
     </div>
 
-    <div class="card" onclick="openModal('img/moises.jpg','Moisés','Miguel Ángel','Escultura monumental del Renacimiento.')">
-        <img src="img/moises.jpg">
-        <h3>Moisés</h3>
-        <p>Miguel Ángel</p>
-    </div>
-
-    <div class="card" onclick="openModal('img/wingedvictory.jpg','Victoria de Samotracia','Desconocido','Símbolo del triunfo y la fuerza.')">
-        <img src="img/wingedvictory.jpg">
-        <h3>Victoria de Samotracia</h3>
-        <p>Autor desconocido</p>
-    </div>
-
-    <div class="card" onclick="openModal('img/kiss.jpg','El Beso','Auguste Rodin','Escultura romántica icónica.')">
-        <img src="img/kiss.jpg">
-        <h3>El Beso</h3>
-        <p>Auguste Rodin</p>
-    </div>
-
-    <div class="card" onclick="openModal('img/terracotta.jpg','Ejército de terracota','Dinastía Qin','Patrimonio histórico chino.')">
-        <img src="img/terracotta.jpg">
-        <h3>Ejército de terracota</h3>
-        <p>Dinastía Qin</p>
+    <div class="card" onclick="openModal('img/miguelangel.jpg','Miguel Ángel','Italia','Escultor, pintor y arquitecto del Renacimiento.')">
+        <img src="img/miguelangel.jpg">
+        <h3>Miguel Ángel</h3>
+        <p>Renacimiento</p>
     </div>
 
 </section>
 
-<!-- MODAL -->
+<!-- MODAL (igual que el otro) -->
 <div id="modal" class="modal">
-     <div class="modal-contentGaleria">
-    <span class="close" onclick="closeModal()">×</span>
-    <img id="modal-img">
-    <h2 id="modal-title"></h2>
-    <h4 id="modal-author"></h4>
-    <p id="modal-desc"></p>
-</div>
+    <div class="modal-contentGaleria">
+        <span class="close" onclick="closeModal()">×</span>
+        <img id="modal-img">
+        <h2 id="modal-title"></h2>
+        <h4 id="modal-author"></h4>
+        <p id="modal-desc"></p>
+    </div>
 </div>
 
 <script>
@@ -101,7 +79,7 @@ function openModal(img, title, author, desc){
     document.getElementById("modal").style.display = "flex";
     document.getElementById("modal-img").src = img;
     document.getElementById("modal-title").innerText = title;
-    document.getElementById("modal-author").innerText = "Autor: " + author;
+    document.getElementById("modal-author").innerText = "Origen: " + author;
     document.getElementById("modal-desc").innerText = desc;
 }
 

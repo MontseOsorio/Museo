@@ -685,4 +685,36 @@ body{
     cursor:pointer;
 
 }
- 
+/*----------------------------------------Artistas-----------------------------------------------*/
+/* HEADER ARTISTAS */
+.artistas-header{
+    margin-top:80px;
+    padding:90px 20px;
+    background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+               url("../img/artistas-bg.jpg");
+    background-size:cover;
+    background-position:center;
+    text-align:center;
+    color:#fff;
+}
+
+.artistas-header h1{
+    font-family:'Playfair Display', serif;
+    font-size:3rem;
+    letter-spacing:2px;
+}
+
+.artistas-header p{
+    max-width:700px;
+    margin:15px auto 0;
+    font-size:1.1rem;
+    opacity:0.9;
+}
+
+/* CONTENEDOR */
+.artistas-container{
+    padding:60px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:30px;
+} 
