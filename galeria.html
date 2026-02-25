@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Galería de Obras | Museo Digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header class="navbar">
+    <div class="logo">Museo<span>Digital</span></div>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="exposiciones.html">Museos</a>
+        <a href="galeria.html" class="active">Galería</a>
+        <a href="colecciones.html">Artistas</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+<br>
+<header class="galeria-header">
+    <h1>Galería de Obras Icónicas</h1>
+    <p>Explora las obras más importantes de la historia del arte</p>
+</header>
+
+<section class="galeria-container">
+
+    <!-- CARD 1 -->
+    <div class="card" onclick="openModal('img/monalisa.jpg','La Mona Lisa','Leonardo da Vinci','Una de las obras más famosas del mundo, símbolo del Renacimiento.')">
+        <img src="img/monalisa.jpg">
+        <h3>La Mona Lisa</h3>
+        <p>Leonardo da Vinci</p>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card" onclick="openModal('img/ultimacena.jpg','La Última Cena','Leonardo da Vinci','Representación del último encuentro de Jesús con sus discípulos.')">
+        <img src="img/ultimacena.jpg">
+        <h3>La Última Cena</h3>
+        <p>Leonardo da Vinci</p>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card" onclick="openModal('img/guernica.jpg','Guernica','Pablo Picasso','Obra que representa el horror de la guerra.')">
+        <img src="img/guernica.jpg">
+        <h3>Guernica</h3>
+        <p>Pablo Picasso</p>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card" onclick="openModal('img/nocheestrellada.jpg','La noche estrellada','Vincent van Gogh','Paisaje nocturno lleno de emoción y movimiento.')">
+        <img src="img/nocheEstrellada.jpg">
+        <h3>La noche estrellada</h3>
+        <p>Vincent van Gogh</p>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="card" onclick="openModal('img/grito.jpg','El Grito','Edvard Munch','Representación del miedo y la angustia humana.')">
+        <img src="img/grito.jpg">
+        <h3>El Grito</h3>
+        <p>Edvard Munch</p>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="card" onclick="openModal('img/nacimiento.jpg','El nacimiento de Venus','Sandro Botticelli','Símbolo del Renacimiento italiano.')">
+        <img src="img/nacimiento.jpg">
+        <h3>El nacimiento de Venus</h3>
+        <p>Sandro Botticelli</p>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="card" onclick="openModal('img/frida1.jpg','Las dos Fridas','Frida Kahlo','Dualidad emocional y cultural de la artista.')">
+        <img src="img/frida1.jpg">
+        <h3>Las dos Fridas</h3>
+        <p>Frida Kahlo</p>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="card" onclick="openModal('img/frida2.jpg','Autorretrato con mono','Frida Kahlo','Identidad, naturaleza y simbolismo personal.')">
+        <img src="img/frida2.jpg">
+        <h3>Autorretrato con mono</h3>
+        <p>Frida Kahlo</p>
+    </div>
+
+    <!-- CARD 9 -->
+    <div class="card" onclick="openModal('img/persistencia.jpg','La persistencia de la memoria','Salvador Dalí','El tiempo representado de forma surrealista.')">
+        <img src="img/persistencia.jpg">
+        <h3>La persistencia de la memoria</h3>
+        <p>Salvador Dalí</p>
+    </div>
+
+    <!-- CARD 10 -->
+    <div class="card" onclick="openModal('img/meninas.jpg','Las Meninas','Diego Velázquez','Obra maestra del barroco español.')">
+        <img src="img/meninas.jpg">
+        <h3>Las Meninas</h3>
+        <p>Diego Velázquez</p>
+    </div>
+
+    <!-- CARD 11 -->
+    <div class="card" onclick="openModal('img/adamo.jpg','La creación de Adán','Miguel Ángel','Fresco icónico de la Capilla Sixtina.')">
+        <img src="img/adamo.jpg">
+        <h3>La creación de Adán</h3>
+        <p>Miguel Ángel</p>
+    </div>
+
+    <!-- CARD 12 -->
+    <div class="card" onclick="openModal('img/perla.jpg','La joven de la perla','Johannes Vermeer','Belleza, misterio y luz en el arte.')">
+        <img src="img/perla.jpg">
+        <h3>La joven de la perla</h3>
+        <p>Johannes Vermeer</p>
+    </div>
+
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">×</span>
+    <img id="modal-img">
+    <h2 id="modal-title"></h2>
+    <h4 id="modal-author"></h4>
+    <p id="modal-desc"></p>
+</div>
+
+<script>
+function openModal(img, title, author, desc){
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("modal-img").src = img;
+    document.getElementById("modal-title").innerText = title;
+    document.getElementById("modal-author").innerText = "Autor: " + author;
+    document.getElementById("modal-desc").innerText = desc;
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
