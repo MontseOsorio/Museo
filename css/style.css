@@ -420,7 +420,7 @@ body{
 
 /* CARD */
 .card{
-    background:#1a1a22;
+    background:#000000;
     border-radius:15px;
     overflow:hidden;
     cursor:pointer;
@@ -585,7 +585,6 @@ body{
     grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
     gap:30px;
 }
-
 
 .card img{
     width:100%;
