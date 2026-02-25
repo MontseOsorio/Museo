@@ -12,7 +12,9 @@ body{
 
 /* NAVBAR */
 .navbar{
+
     background:rgba(0, 0, 0, 0.85);
+
     background:rgba(14, 14, 14, 0.85);
     position:fixed;
     width:100%;
@@ -377,6 +379,7 @@ body{
 .museum-card:hover{
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(212,175,55,.4);
+
 }
 /*------------------------------------------galeria------------------------------------------------------------*/
 *{
@@ -663,4 +666,5 @@ body{
     right:40px;
     font-size:40px;
     cursor:pointer;
+
 }
