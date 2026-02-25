@@ -21,7 +21,6 @@
             <a href="galeria.html">Galería</a>
             <a href="colecciones.html">Artistas</a>
             <a href="esculturas.html">Esculturas</a>
-        <a href="esculturas.html">Esculruras</a>
     </nav>
 </header>
 <br>
@@ -68,7 +67,7 @@
     </div>
 
     <!-- CARD 6 -->
-    <div class="card" onclick="openModal('img/nacimiento.jpg','El nacimiento de Venus','Sandro Botticelli','Símbolo del Renacimiento italiano.')">
+    <div class="card" onclick="openModal('img/El nacimiento de venus.jpg','El nacimiento de Venus','Sandro Botticelli','Símbolo del Renacimiento italiano.')">
         <img src="img/El nacimiento de venus.jpg">
         <h3>El nacimiento de Venus</h3>
         <p>Sandro Botticelli</p>
@@ -96,14 +95,14 @@
     </div>
 
     <!-- CARD 10 -->
-    <div class="card" onclick="openModal('img/meninas.jpg','Las Meninas','Diego Velázquez','Obra maestra del barroco español.')">
+    <div class="card" onclick="openModal('img/LasMeninas.jpg','Las Meninas','Diego Velázquez','Obra maestra del barroco español.')">
         <img src="img/LasMeninas.jpg">
         <h3>Las Meninas</h3>
         <p>Diego Velázquez</p>
     </div>
 
     <!-- CARD 11 -->
-    <div class="card" onclick="openModal('img/adamo.jpg','La creación de Adán','Miguel Ángel','Fresco icónico de la Capilla Sixtina.')">
+    <div class="card" onclick="openModal('img/CreacionAdan.jpg','La creación de Adán','Miguel Ángel','Fresco icónico de la Capilla Sixtina.')">
         <img src="img/CreacionAdan.jpg">
         <h3>La creación de Adán</h3>
         <p>Miguel Ángel</p>
@@ -118,14 +117,19 @@
 
 </section>
 
+
 <!-- MODAL -->
 <div id="modal" class="modal">
-    <span class="close" onclick="closeModal()">×</span>
-    <img id="modal-img">
-    <h2 id="modal-title"></h2>
-    <h4 id="modal-author"></h4>
-    <p id="modal-desc"></p>
+    <div class="modal-contentGaleria">
+        <span class="close" onclick="closeModal()">×</span>
+        <img id="modal-img">
+        <h2 id="modal-title"></h2>
+        <h4 id="modal-author"></h4>
+        <p id="modal-desc"></p>
+    </div>
 </div>
+
+
 
 <script>
 function openModal(img, title, author, desc){
