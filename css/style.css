@@ -588,7 +588,7 @@ body{
 
 /* CARD */
 .card{
-    background:#fff;
+    background:#000000;
     border-radius:15px;
     overflow:hidden;
     cursor:pointer;
