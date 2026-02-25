@@ -586,16 +586,6 @@ body{
     gap:30px;
 }
 
-/* CARD */
-.card{
-    background:#fff;
-    border-radius:15px;
-    overflow:hidden;
-    cursor:pointer;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-    transition:all .4s ease;
-    text-align:center;
-}
 
 .card img{
     width:100%;
@@ -632,7 +622,7 @@ body{
     justify-content:center;
     align-items:center;
     text-align:center;
-    color:#fff;
+    color:#161515;
     padding:20px;
     z-index:999;
 }
