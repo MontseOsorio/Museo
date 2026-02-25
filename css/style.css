@@ -711,3 +711,9 @@ body{
     font-size:0.95rem;
     text-align:justify;
 }
+.modal-contentGaleria img{
+    width: 100%;
+    max-height: 350px;   /* 👈 evita que se haga gigante */
+    object-fit: cover;
+    border-radius: 8px;
+}
