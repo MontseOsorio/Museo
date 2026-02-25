@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
     <div class="logo">Museo<span>Digital</span></div>
     <nav>
@@ -25,37 +27,62 @@
 <!-- HEADER -->
 <header class="artistas-header">
     <h1>Artistas más reconocidos</h1>
-    <p>Conoce la historia de los artistas más importantes del mundo del arte</p>
+    <p>Conoce la historia y legado de los artistas más influyentes del arte universal</p>
 </header>
 
 <!-- CONTENEDOR -->
 <section class="artistas-container">
 
-    <div class="card" onclick="openModal('img/davinci.jpg','Leonardo da Vinci','Italia','Genio del Renacimiento, pintor de La Mona Lisa y La Última Cena.')">
+    <div class="card" onclick="openModal(
+    'img/davinci.jpg',
+    'Leonardo da Vinci',
+    'Italia (1452-1519)',
+    'Leonardo da Vinci fue uno de los grandes genios del Renacimiento. Destacó como pintor, científico, ingeniero e inventor. Entre sus obras más famosas están La Mona Lisa y La Última Cena. Sus estudios anatómicos y científicos influyeron profundamente en el desarrollo del arte y la ciencia.'
+    )">
         <img src="img/davinci.jpg">
         <h3>Leonardo da Vinci</h3>
         <p>Renacimiento</p>
     </div>
 
-    <div class="card" onclick="openModal('img/picasso.jpg','Pablo Picasso','España','Creador del cubismo y autor de Guernica.')">
+    <div class="card" onclick="openModal(
+    'img/picasso.jpg',
+    'Pablo Picasso',
+    'España (1881-1973)',
+    'Pablo Picasso fue el creador del cubismo y uno de los artistas más influyentes del siglo XX. Su obra Guernica es un símbolo universal contra la guerra. A lo largo de su vida exploró distintos estilos y revolucionó el arte moderno.'
+    )">
         <img src="img/picasso.jpg">
         <h3>Pablo Picasso</h3>
         <p>Cubismo</p>
     </div>
 
-    <div class="card" onclick="openModal('img/vangogh.jpg','Vincent van Gogh','Países Bajos','Autor de La noche estrellada.')">
+    <div class="card" onclick="openModal(
+    'img/vangogh.jpg',
+    'Vincent van Gogh',
+    'Países Bajos (1853-1890)',
+    'Vincent van Gogh fue un pintor postimpresionista conocido por su estilo vibrante y emocional. Obras como La noche estrellada reflejan su intensidad artística. Aunque en vida vendió pocas pinturas, hoy es uno de los artistas más valorados del mundo.'
+    )">
         <img src="img/vangogh.jpg">
         <h3>Vincent van Gogh</h3>
         <p>Postimpresionismo</p>
     </div>
 
-    <div class="card" onclick="openModal('img/frida.jpg','Frida Kahlo','México','Ícono del arte mexicano y el autorretrato.')">
+    <div class="card" onclick="openModal(
+    'img/frida.jpg',
+    'Frida Kahlo',
+    'México (1907-1954)',
+    'Frida Kahlo fue una pintora mexicana reconocida por sus autorretratos llenos de simbolismo, identidad y cultura. Su obra explora el dolor físico y emocional, así como temas de género y nacionalidad, convirtiéndola en un ícono cultural mundial.'
+    )">
         <img src="img/frida.jpg">
         <h3>Frida Kahlo</h3>
         <p>Surrealismo</p>
     </div>
 
-    <div class="card" onclick="openModal('img/miguelangel.jpg','Miguel Ángel','Italia','Escultor, pintor y arquitecto del Renacimiento.')">
+    <div class="card" onclick="openModal(
+    'img/miguelangel.jpg',
+    'Miguel Ángel',
+    'Italia (1475-1564)',
+    'Miguel Ángel fue escultor, pintor y arquitecto del Renacimiento. Entre sus obras más importantes destacan la escultura del David y la pintura de la Capilla Sixtina. Es considerado uno de los mayores artistas de la historia.'
+    )">
         <img src="img/miguelangel.jpg">
         <h3>Miguel Ángel</h3>
         <p>Renacimiento</p>
@@ -63,7 +90,7 @@
 
 </section>
 
-<!-- MODAL (igual que el otro) -->
+<!-- MODAL -->
 <div id="modal" class="modal">
     <div class="modal-contentGaleria">
         <span class="close" onclick="closeModal()">×</span>
@@ -75,11 +102,11 @@
 </div>
 
 <script>
-function openModal(img, title, author, desc){
+function openModal(img, title, info, desc){
     document.getElementById("modal").style.display = "flex";
     document.getElementById("modal-img").src = img;
     document.getElementById("modal-title").innerText = title;
-    document.getElementById("modal-author").innerText = "Origen: " + author;
+    document.getElementById("modal-author").innerText = "Datos: " + info;
     document.getElementById("modal-desc").innerText = desc;
 }
 
