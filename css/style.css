@@ -713,7 +713,7 @@ body{
 }
 .modal-contentGaleria img{
     width: 100%;
-    max-height: 350px;   /* 👈 evita que se haga gigante */
+    max-height: 350px;   
     object-fit: cover;
     border-radius: 8px;
 }
